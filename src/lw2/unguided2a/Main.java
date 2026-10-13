@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final int MAX_BORROW = 2;
+        int max = 2;
 
         LinkedList<String[]> requests = new LinkedList<>();
         LinkedList<String[]> books = new LinkedList<>();
@@ -80,7 +80,7 @@ public class Main {
             int stock = Integer.parseInt(book[1]);
             int borrowed = Integer.parseInt(member[1]);
 
-            if (stock > 0 && borrowed < MAX_BORROW) {
+            if (stock > 0 && borrowed < max) {
 
                 stock -= 1;
                 borrowed += 1;
