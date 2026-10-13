@@ -24,10 +24,6 @@ public abstract class PrintJob implements Chargeable {
     @Override
     public abstract int calculateCharge();
 
-    /**
-     * Overloaded version: total charge for a number of identical copies.
-     * Implemented once here so MonoPrint/ColourPrint do not duplicate it.
-     */
     public int calculateCharge(int copies) {
         if (copies <= 0) {
             throw new IllegalArgumentException("copies must be a positive number");
